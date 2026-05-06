@@ -1,54 +1,54 @@
 # Samuel Yacoub
 
 ## About Me
-I am **Samuel Yacoub**, a Software Engineer and an aspiring Backend Developer.  
-This repository represents my learning journey in **ASP.NET Core**, where I explore backend development concepts, architecture, and practical implementation.
+I am **Samuel Yacoub**, a Software Engineer and aspiring Backend Developer.  
+This repository documents my hands-on learning journey in **ASP.NET Core**, focusing on understanding how web applications work internally.
 
-My focus is on building strong fundamentals in server-side development, APIs, and scalable web applications using the .NET ecosystem.
+My goal is to build a strong foundation in **HTTP, request/response handling, and backend architecture** using .NET.
 
 ---
 
-## Learning Journey: ASP.NET Core
-
-This repository documents my progression while learning ASP.NET Core, starting from basic empty projects and evolving through repeated practice and improvement.
-
-The goal is continuous improvement through building, breaking, and rebuilding projects.
+## Learning Approach
+- Build → Review → Improve  
+- Focus on fundamentals before abstractions  
+- Learn by working directly with `HttpContext` and the request pipeline  
 
 ---
 
 ## Projects
 
-### 1. MyFirstApp
-A first attempt at creating an ASP.NET Core application using an **empty template**.  
-This project represents my initial exploration of:
+### 1. MyFirstApp  
+Initial ASP.NET Core project.  
+Basic setup and understanding how a minimal app runs.
 
-- Project structure
-- Basic setup of ASP.NET Core
-- Understanding the runtime behavior of an empty web application
+### 2. MyFirstAppReviewing  
+Improved version of the first project.  
+Better structure and clearer application flow.
 
----
+### 3. AppRunMethod  
+Uses `Run()` as terminal middleware.  
+Handles requests with `HttpContext` and returns JSON responses.
 
-### 2. MyFirstAppReviewing
-A revised version of the first project.  
-This is a **clean re-implementation** of the same idea after reviewing mistakes and improving understanding.
+### 4. RequestHeadersDictionary  
+Reads HTTP request headers.  
+Extracts client data like `User-Agent`.
 
-Key improvements include:
-
-- Better project organization
-- Cleaner setup approach
-- Reinforcement of core ASP.NET Core concepts learned from the first attempt
-
----
-
-## Purpose of This Repository
-- Track my learning progress in backend development
-- Practice ASP.NET Core fundamentals
-- Improve coding discipline through iterative development
-- Build foundation for advanced backend systems
+### 5. ResponseHeadersDictionary  
+Sets HTTP response headers.  
+Controls metadata like `Content-Type`.
 
 ---
 
-## Current Status
-Still in learning phase — actively improving and refactoring previous work.
+## Key Concepts
+- ASP.NET Core request pipeline  
+- `HttpContext` (Request & Response)  
+- HTTP Headers  
+- Async/Await  
+- Middleware (`Run`)  
 
 ---
+
+## Current Focus
+- HTTP internals  
+- Request/Response lifecycle  
+- ASP.NET Core pipeline behavior  
