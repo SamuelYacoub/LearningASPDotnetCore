@@ -7,7 +7,28 @@ namespace postman_practising
             var builder = WebApplication.CreateBuilder(args);
             var app = builder.Build();
 
-            app.MapGet("/", () => "Hello World!");
+            app.Run(async (HttpContext context) => {
+
+
+                context.Response.ContentType = "text/html";
+
+                if (context.Request.Method == "GET")
+                {
+                    if (context.Request.Headers.ContainsKey("AuthorizationKey")) ;
+                    string auth = context.Request.Headers["AuthorizationKey"];
+                    await context.Response.WriteAsync($"the authoriazation key : {auth}");
+                }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            });
 
             app.Run();
         }
