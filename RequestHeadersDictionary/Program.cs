@@ -44,16 +44,27 @@ namespace RequestHeadersDictionary
             app.Run(async (HttpContext context) => {
 
 
-                context.Request.Headers["Content-Type"] = "text/html";
+                context.Request.Headers["Content-Type"] = "text/plain";
 
                 if (context.Request.Headers.ContainsKey("User-Agent"))
                 {
                         string userAgent = context.Request.Headers["User-Agent"];
                         await context.Response.WriteAsync($"<h1>{userAgent}<h1>");
                     
+                        
                 }
 
+                context.Request.Headers["languagee"] = "arabic";
+                context.Response.WriteAsync(context.Request.Headers["languagee"].ToString());
 
+
+                if (context.Request.Headers.ContainsKey("Date"))
+                {
+                    string date = context.Request.Headers["Date"].ToString() ;
+                    await context.Response.WriteAsync($"<h1>{date}<h1>");
+
+                    context.Request.Headers["Date"] = "monday 15 sep 2025 ";
+                }
 
             });
             app.Run();

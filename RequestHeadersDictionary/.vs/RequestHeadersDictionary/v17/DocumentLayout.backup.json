@@ -14,11 +14,15 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Document",
@@ -26,11 +30,11 @@
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\projects\\asp.net_core_projects\\RequestHeadersDictionary\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\projects\\asp.net_core_projects\\RequestHeadersDictionary\\Program.cs*",
-              "RelativeToolTip": "Program.cs*",
-              "ViewState": "AgIAABYAAAAAAAAAAAAAACoAAAAAAAAAAAAAAA==",
+              "ToolTip": "D:\\projects\\asp.net_core_projects\\RequestHeadersDictionary\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAIwC4AAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-06T18:24:28.203Z",
+              "WhenOpened": "2026-05-07T13:33:26.674Z",
               "EditorCaption": ""
             }
           ]

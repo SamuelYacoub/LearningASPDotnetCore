@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RequestHeadersDictionary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e032c850514d13dc7ad48cfdf95129f27a799631")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47f4321069eec703112cc808d0cf8c30f425d1ae")]
 [assembly: System.Reflection.AssemblyProductAttribute("RequestHeadersDictionary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RequestHeadersDictionary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
