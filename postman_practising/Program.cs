@@ -11,14 +11,13 @@ namespace postman_practising
 
 
                 context.Response.ContentType = "text/html";
+                context.Request.Headers["AuthorizationKey"] = "100001";
 
-                if (context.Request.Method == "GET")
-                {
-                    if (context.Request.Headers.ContainsKey("AuthorizationKey")) ;
+                if (context.Request.Headers.ContainsKey("AuthorizationKey")) { 
                     string auth = context.Request.Headers["AuthorizationKey"];
-                    await context.Response.WriteAsync($"the authoriazation key : {auth}");
+                    await context.Response.WriteAsync($" <p>the authoriazation key : {auth} <p>");
+               
                 }
-            
             
             
             

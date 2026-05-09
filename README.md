@@ -17,38 +17,27 @@ My goal is to build a strong foundation in **HTTP, request/response handling, an
 
 ## Projects
 
-### 1. MyFirstApp  
-Initial ASP.NET Core project.  
-Basic setup and understanding how a minimal app runs.
+# ASP.NET Core Learning Projects
 
-### 2. MyFirstAppReviewing  
-Improved version of the first project.  
-Better structure and clearer application flow.
+## Projects
 
-### 3. AppRunMethod  
-Uses `Run()` as terminal middleware.  
-Handles requests with `HttpContext` and returns JSON responses.
+### 1. MyFirstApp
+Basic ASP.NET Core setup and minimal application execution.
 
-### 4. RequestHeadersDictionary  
-Reads HTTP request headers.  
-Extracts client data like `User-Agent`.
+### 2. MyFirstAppReviewing
+Refactored version with improved structure and flow.
 
-### 5. ResponseHeadersDictionary  
-Sets HTTP response headers.  
-Controls metadata like `Content-Type`.
+### 3. AppRunMethod
+Terminal middleware using Run() to handle requests with HttpContext.
 
----
+### 4. RequestHeadersDictionary
+Reads and manipulates HTTP request headers (User-Agent, Date, custom headers).
 
-## Key Concepts
-- ASP.NET Core request pipeline  
-- `HttpContext` (Request & Response)  
-- HTTP Headers  
-- Async/Await  
-- Middleware (`Run`)  
+### 5. ResponseHeadersDictionary
+Sets custom HTTP response headers (name, role, Content-Type).
 
----
+### 6. PostmanPractising
+GET request handler with custom authorization header validation.
 
-## Current Focus
-- HTTP internals  
-- Request/Response lifecycle  
-- ASP.NET Core pipeline behavior  
+### 7. QueryPathParameters
+Extracts URL path, HTTP method, and query string parameters.
