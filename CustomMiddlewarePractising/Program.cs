@@ -27,7 +27,7 @@ namespace CustomMiddlewarePractising
                 await context.Response.WriteAsync("\n return control back to middleware 2 after finishing middleware 3");
 
             });
-
+              
 
 
             app.Use(async (HttpContext context, RequestDelegate next) =>
