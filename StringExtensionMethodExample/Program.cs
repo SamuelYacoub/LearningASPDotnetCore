@@ -27,7 +27,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!".spaceToUnderscore());
+            Console.WriteLine("Samuel Yacoub Ishak Ghataas".spaceToUnderscore());
         }
     }
 }
