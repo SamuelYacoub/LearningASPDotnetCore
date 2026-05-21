@@ -1,5 +1,5 @@
 using CustomMiddlewarePractising.CustomMiddleware;
-
+using CustomMiddlewarePractising.CheckCondtionMiddleware;
 namespace CustomMiddlewarePractising
 {
     public class Program
@@ -8,28 +8,30 @@ namespace CustomMiddlewarePractising
         {
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddTransient<MyCustomMiddleware>();
+            builder.Services.AddTransient<CheckConditionMiddleware>();
             var app = builder.Build();
 
             app.Use(async(HttpContext context , RequestDelegate next) =>
             {
-                await context.Response.WriteAsync("\n this is the starter middleware 1 in request middleware pipeline");
+                await context.Response.WriteAsync("\n first builtin middleware starts");
 
                 next(context);
 
-                await context.Response.WriteAsync("\n return control back to middleware 1 after finishing middleware 2");
+                await context.Response.WriteAsync("\n first builtin middleware ends");
 
             });
+            app.UseCheckCondition();
 
             app.UseMyMiddleware();
 
 
             app.Use(async (HttpContext context, RequestDelegate next) =>
             {
-                await context.Response.WriteAsync("\n this is middleware 2 in request middleware pipeline");
+                await context.Response.WriteAsync("\n second builtin middleware starts ");
 
                 await next(context);
 
-                await context.Response.WriteAsync("\n return control back to middleware 2 after finishing middleware 3");
+                await context.Response.WriteAsync("\n second builtin  middleware ends");
 
             });
               
@@ -37,7 +39,7 @@ namespace CustomMiddlewarePractising
 
             app.Use(async (HttpContext context, RequestDelegate next) =>
             {
-                await context.Response.WriteAsync("\n this is final middleware 3 in request middleware pipeline");
+                await context.Response.WriteAsync("\n third and final builtin middleware (terminal) no next gooooooo back ");
             });
 
 
