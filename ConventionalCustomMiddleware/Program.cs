@@ -20,6 +20,7 @@ namespace ConventionalCustomMiddleware
             });
 
             app.UseConventionalMiddleware();
+            app.UseHelloConventionalMiddleware();
 
             app.Run();
         }
