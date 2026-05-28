@@ -22,6 +22,15 @@ namespace ConventionalCustomMiddleware
             app.UseConventionalMiddleware();
             app.UseHelloConventionalMiddleware();
 
+
+            app.UseWhen(
+
+                context => context.Request.Path.StartsWithSegments("/api")
+
+                ,
+                branch => branch.UseMiddleware<HelloConventionalMiddleware>()
+                );
+
             app.Run();
         }
     }

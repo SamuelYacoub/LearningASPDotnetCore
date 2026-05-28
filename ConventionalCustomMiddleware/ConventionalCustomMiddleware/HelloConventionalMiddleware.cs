@@ -14,19 +14,19 @@ namespace ConventionalCustomMiddleware.ConventionalCustomMiddleware
             _next = next;
         }
 
-        public  Task Invoke(HttpContext httpContext)
+        public  async Task InvokeAsync(HttpContext httpContext)
         {
             if(httpContext.Request.Query.ContainsKey("firstname") && httpContext.Request.Query.ContainsKey("lastname"))
             {
                 string firstname = httpContext.Request.Query["firstname"];
                 string lastname = httpContext.Request.Query["lastname"];
 
-                 httpContext.Response.WriteAsync($"\n Hello {firstname} {lastname} \n" +
+                await httpContext.Response.WriteAsync($"\n Hello {firstname} {lastname} \n" +
                      $"");
               
             }
 
-            return _next(httpContext);
+            await _next(httpContext);
         }
     }
 
