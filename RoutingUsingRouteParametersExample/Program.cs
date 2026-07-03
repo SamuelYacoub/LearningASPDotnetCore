@@ -33,6 +33,28 @@ namespace RoutingUsingRouteParametersExample
 
             });
 
+
+            app.MapPost("/education/{school}/{classs}/{student}/{id=100}", async (HttpContext context) =>
+            {
+                string? school = Convert.ToString(context.Request.RouteValues["school"]);
+                string? classs = Convert.ToString(context.Request.RouteValues["classs"]);
+                string? student = Convert.ToString(context.Request.RouteValues["student"]);
+                int? id = Convert.ToInt32(context.Request.RouteValues["id"]);
+
+                await context.Response.WriteAsync($"the info of student that you post is \n his name is {student} \n his school is {school}" +
+                    $"\n his class is {classs} \n his id is {id}");
+
+
+
+
+            });
+
+            app.MapGet("/products/detials/{id?}", async (HttpContext context) =>
+            {
+                int id = Convert.ToInt32(context.Request.RouteValues["id"]);
+                await context.Response.WriteAsync($"ok sir we will get the details of product id = {id}");
+                
+            });
             app.Run();
         }
     }
