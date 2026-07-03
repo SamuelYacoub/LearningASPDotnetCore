@@ -55,7 +55,20 @@ namespace RoutingUsingRouteParametersExample
                 await context.Response.WriteAsync($"ok sir we will get the details of product id = {id}");
                 
             });
+            app.Map("/school/{grade}/{student?}", async (context) =>
+            {
+                string? grade = Convert.ToString(context.Request.RouteValues["grade"]);
+                string? student = Convert.ToString(context.Request.RouteValues["student"]);
+
+                await context.Response.WriteAsync($"the in the school and the student whose name is {student} his grade is {grade} ");
+
+            });
+
+            app.MapFallback(async (context) =>
+            {
+                await context.Response.WriteAsync($"sorry, there isn't an endpoint that matches your requested url at \n {context.Request.Path}");
+            });
             app.Run();
         }
-    }
+    } 
 }
