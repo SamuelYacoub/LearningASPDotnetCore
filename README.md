@@ -1,43 +1,36 @@
-# Samuel Yacoub
+# ASP.NET Core Learning Journey
 
-## About Me
-I am **Samuel Yacoub**, a Software Engineer and aspiring Backend Developer.  
-This repository documents my hands-on learning journey in **ASP.NET Core**, focusing on understanding how web applications work internally.
-
-My goal is to build a strong foundation in **HTTP, request/response handling, and backend architecture** using .NET.
+## Repository Overview
+This repository serves as my personal learning journey through **ASP.NET Core**, documenting hands-on projects and exercises that build a strong foundation in backend web development using .NET.
 
 ---
 
-## Learning Approach
-- Build → Review → Improve  
-- Focus on fundamentals before abstractions  
-- Learn by working directly with `HttpContext` and the request pipeline  
+## About This Repository
+I am **Samuel Yacoub**, a Software Engineer exploring the depths of web application development. This repository contains over 19 projects that systematically cover:
+
+- **HTTP Fundamentals** - Understanding request/response cycles
+- **Middleware Pipeline** - Building and customizing request processing
+- **Routing** - Implementing endpoints and URL handling
+- **Headers & Parameters** - Working with request/response data
+- **Custom Components** - Creating reusable middleware and extensions
+
+Each project represents a specific concept, built from the ground up to ensure deep understanding before moving to higher-level abstractions.
 
 ---
 
-## Projects
+## What You'll Find Here
+- **19+ ASP.NET Core Projects** covering various aspects of web development
+- **Custom Middleware Implementations** with extension methods
+- **HTTP Headers Exercises** - Request and response manipulation
+- **Routing Examples** - From basic to conditional routing with parameters
+- **Calculator Application** - HTTP GET based math operations
+- **String Extensions** - Custom utility methods
 
-# ASP.NET Core Learning Projects
 
-## Projects
 
-### 1. MyFirstApp
-Basic ASP.NET Core setup and minimal application execution.
+## Tech Stack
+![.NET Core](https://img.shields.io/badge/.NET_Core-512BD4?style=flat-square&logo=dotnet&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white)
+![ASP.NET](https://img.shields.io/badge/ASP.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white)
 
-### 2. MyFirstAppReviewing
-Refactored version with improved structure and flow.
 
-### 3. AppRunMethod
-Terminal middleware using Run() to handle requests with HttpContext.
-
-### 4. RequestHeadersDictionary
-Reads and manipulates HTTP request headers (User-Agent, Date, custom headers).
-
-### 5. ResponseHeadersDictionary
-Sets custom HTTP response headers (name, role, Content-Type).
-
-### 6. PostmanPractising
-GET request handler with custom authorization header validation.
-
-### 7. QueryPathParameters
-Extracts URL path, HTTP method, and query string parameters.
