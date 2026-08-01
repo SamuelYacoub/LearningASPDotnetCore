@@ -6,7 +6,7 @@ namespace aspnet_pro020_RouteValuesConstraintsImplemention
     {
         public static void Main(string[] args)
         {
-          
+           
 
             var builder = WebApplication.CreateBuilder(args);
 
