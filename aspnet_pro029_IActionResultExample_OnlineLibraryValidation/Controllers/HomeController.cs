@@ -11,7 +11,7 @@ namespace aspnet_pro029_IActionResultExample_OnlineLibraryValidation.Controllers
 
                 // not logged in 
                 HttpContext.Response.StatusCode=400;
-                return new ContentResult() { Content = "an unauthorized access", ContentType = "text/plain" };
+                return new ContentResult() { Content = "an unauthenticated access", ContentType = "text/plain" };
             }
             string? isLoggedIn = Convert.ToString(HttpContext.Request.Query["isloggedin"]);
 
@@ -21,7 +21,7 @@ namespace aspnet_pro029_IActionResultExample_OnlineLibraryValidation.Controllers
                 // not logged in 
                 HttpContext.Response.StatusCode = 400;
 
-                return new ContentResult() { Content = "an unauthorized access", ContentType = "text/plain" };
+                return new ContentResult() { Content = "an unauthenticated access", ContentType = "text/plain" };
             }
 
             if ((isLoggedIn!="true"))
@@ -30,7 +30,7 @@ namespace aspnet_pro029_IActionResultExample_OnlineLibraryValidation.Controllers
                 // not logged in 
                 HttpContext.Response.StatusCode = 400;
 
-                return new ContentResult() { Content = "an unauthorized access", ContentType = "text/plain" };
+                return new ContentResult() { Content = "an unauthenticated access", ContentType = "text/plain" };
             }
 
             // no id is supplied 
