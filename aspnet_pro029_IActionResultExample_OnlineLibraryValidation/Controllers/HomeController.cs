@@ -4,41 +4,49 @@ namespace aspnet_pro029_IActionResultExample_OnlineLibraryValidation.Controllers
 {
     public class HomeController : Controller
     {
-        [Route("/book")]
+        [Route("/bookstore")]
         public IActionResult GetBook()
         {
             if (!HttpContext.Request.Query.ContainsKey("isloggedin")) {
 
                 // not logged in 
-                HttpContext.Response.StatusCode=400;
-                return new ContentResult() { Content = "an unauthenticated access", ContentType = "text/plain" };
+                //    HttpContext.Response.StatusCode=400;
+                //    return new ContentResult() { Content = "an unauthenticated access", ContentType = "text/plain" };
+
+                 
+
+                return BadRequest("an unauthenticated access");
+                
             }
             string? isLoggedIn = Convert.ToString(HttpContext.Request.Query["isloggedin"]);
 
             if (string.IsNullOrEmpty(isLoggedIn))
             {
 
-                // not logged in 
-                HttpContext.Response.StatusCode = 400;
+                //// not logged in 
+                //HttpContext.Response.StatusCode = 400;
 
-                return new ContentResult() { Content = "an unauthenticated access", ContentType = "text/plain" };
+                //return new ContentResult() { Content = "an unauthenticated access", ContentType = "text/plain" };
+                return BadRequest("an unauthenticated access");
             }
 
             if ((isLoggedIn!="true"))
             {
 
                 // not logged in 
-                HttpContext.Response.StatusCode = 400;
+                //HttpContext.Response.StatusCode = 400;
 
-                return new ContentResult() { Content = "an unauthenticated access", ContentType = "text/plain" };
+                //return new ContentResult() { Content = "an unauthenticated access", ContentType = "text/plain" };
+                return BadRequest("an unauthenticated access");
+
             }
 
             // no id is supplied 
             if (!HttpContext.Request.Query.ContainsKey("bookid")) {
-                HttpContext.Response.StatusCode = 400;
+                //HttpContext.Response.StatusCode = 400;
 
-                return new ContentResult() { Content = "You Missed the Book ID you want ", ContentType = "text/plain" };
-
+               // return new ContentResult() { Content = "You Missed the Book ID you want ", ContentType = "text/plain" };
+                return NotFound("You Missed the Book ID you want");
 
             }
 
@@ -77,8 +85,10 @@ namespace aspnet_pro029_IActionResultExample_OnlineLibraryValidation.Controllers
             // the ok status 
             HttpContext.Response.StatusCode = 200;
 
-            return File("/ielts.pdf" ,"application/pdf" );
-            
+            // return new RedirectToActionResult("RetreiveBook", "Store", new {}, true);
+            //return RedirectPermanent("book/store");
+            //return  RedirectPermanent("https://www.youtube.com");
+            return LocalRedirectPermanent("book/store");
 
 
         }
